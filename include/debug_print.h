@@ -2,10 +2,12 @@
 #define DEBUG_PRINT_H
 
 #define DEBUG         1
-#define SHOW_MESSAGES 1
+#define SHOW_MESSAGES 0
 
 #if DEBUG == 1
-#define DEBUG_STATUS(...) Serial.println(__VA_ARGS__)
+#define DEBUG_STATUS(...)    \
+    Serial.print("DEBUG: "); \
+    Serial.println(__VA_ARGS__)
 #else
 #define DEBUG_STATUS(...) void()
 #endif

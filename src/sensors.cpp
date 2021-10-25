@@ -30,7 +30,7 @@ void ledInit(int pin) {
  *
  ************************************************************************/
 void ledOn(int pin) {
-    DEBUG_STATUS("TURNING ON LED.");
+    DEBUG_MESSAGE("TURNING ON LED.");
     digitalWrite(pin, HIGH);
 }
 
@@ -46,6 +46,22 @@ void ledOn(int pin) {
  *
  ************************************************************************/
 void ledOff(int pin) {
-    DEBUG_STATUS("TURNING OFF LED.");
+    DEBUG_MESSAGE("TURNING OFF LED.");
     digitalWrite(pin, LOW);
+}
+
+/************************************************************************
+ *
+ * Function:  ledOff
+ * --------------------
+ *  Turns off the led.
+ *
+ *  pin: pin of the led
+ *
+ *  returns: none
+ *
+ ************************************************************************/
+int readADC(int pin) {
+    DEBUG_MESSAGE("READING ADC.");
+    return analogRead(pin);
 }
